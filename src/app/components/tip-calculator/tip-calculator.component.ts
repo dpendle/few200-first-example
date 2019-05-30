@@ -17,6 +17,7 @@ export class TipCalculatorComponent implements OnInit {
   updateAmount(amount: number) {
 
     this.amount = amount;
+    console.log(amount);
   }
 
   setTipPercent(percent: number) {

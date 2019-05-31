@@ -2,6 +2,7 @@
 <div>
   <input type="button"
          class="btn btn-primary btn-sm"
+         [disabled]="cantDecrement$ | async"
          value="-"
          (click)="decrement()">
   <input type="button"
@@ -10,6 +11,23 @@
          (click)="increment()">
   <input type="button"
          class="btn btn-primary btn-sm"
+         [disabled]="atTheStart$ | async"
          value="Reset"
          (click)="reset()">
+</div>
+<div class="btn-group"
+     role="group"
+     aria-label="Basic example">
+  <button type="button"
+          (click)="setCountBy(1)"
+          [disabled]="(by$ | async) === 1"
+          class="btn btn-secondary">1</button>
+  <button type="button"
+          (click)="setCountBy(3)"
+          [disabled]="(by$ | async) === 3"
+          class="btn btn-secondary">3</button>
+  <button type="button"
+          (click)="setCountBy(5)"
+          [disabled]="(by$ | async) === 5"
+          class="btn btn-secondary">5</button>
 </div>

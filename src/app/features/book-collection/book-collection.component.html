@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-sm-4"
+       style='text-align: center,'>
+    <h4>Enter Book Information</h4>
+  </div>
+  <div class="col-sm-4"
+       style='text-align: center'>
+    <h4>Available Books</h4>
+  </div>
+  <div class="col-sm-4"
+       style='text-align: center'>
+    <h4>Books On Loan</h4>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-4">
+    <app-enter-book-info></app-enter-book-info>
+  </div>
+  <div class="col-sm-4">
+    <app-available-book-list [bookList]="books$ | async"></app-available-book-list>
+  </div>
+  <div class="col-sm-4">
+    <app-onloan-book-list [onLoanList]="onLoanBooks$ | async"></app-onloan-book-list>
+  </div>
+</div>

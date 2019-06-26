@@ -1,0 +1,14 @@
+<ul class="list-unstyled">
+  <li class="alert alert-info"
+      *ngFor="let book of bookList">
+    <div> Title: {{ book.title }}</div>
+    <div> Author: {{ book.author }}</div>
+    <div> Book Type: {{ book.type }}</div>
+    <div>
+      <input type="button"
+             (click)="checkOutBook(book)"
+             class="btn btn-danger btn-sm"
+             value="Check Out Book">
+    </div>
+  </li>
+</ul>

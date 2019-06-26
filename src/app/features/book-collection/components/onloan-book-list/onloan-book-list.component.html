@@ -1,0 +1,8 @@
+<ul class="list-unstyled">
+  <li class="alert alert-info"
+      *ngFor="let book of onLoanList">
+    <div> Title: {{ book.title }}</div>
+    <div> Author: {{ book.author }}</div>
+    <div> Book Type: {{ book.type }}</div>
+  </li>
+</ul>
